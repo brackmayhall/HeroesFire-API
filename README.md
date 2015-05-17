@@ -1,9 +1,9 @@
 # Heroes Fire API
 
-Node app for Heroes Fire API
+Node web service for Heroes Fire API
 
 ## Required packages
-* phantomjs, install this globally(-g) and set PATH to its bin folder
-* phantom
+* express
+* request
 * soupselect
 * htmlparser
