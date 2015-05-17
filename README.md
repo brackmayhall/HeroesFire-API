@@ -2,6 +2,13 @@
 
 Node web service for Heroes Fire
 
+```
+npm install
+```
+```
+navigate to http://localhost:8081/{heroName}
+```
+
 ## Required packages
 * express
 * request
