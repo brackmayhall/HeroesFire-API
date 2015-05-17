@@ -7,7 +7,7 @@ Node web service for Heroes Fire
 * request
 * soupselect
 * htmlparser
-* 
+
 ## Example json hero output
 ```
 {
