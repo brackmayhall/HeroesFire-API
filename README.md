@@ -42,3 +42,7 @@ Node web service for Heroes Fire
   ]
 }
 ```
+
+## TODO
+* finish data parsing for abilities and skins
+* better error checking
