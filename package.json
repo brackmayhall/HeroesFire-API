@@ -1,0 +1,13 @@
+{
+  "name"         : "heroes-fire-api",
+  "version"      : "0.0.1",
+  "description"  : "heroes fire api",
+  "main"         : "heroesFireApi.js",
+  "author"       : "brackMAYHALL",
+  "dependencies" : {
+    "htmlparser"    : "latest",
+    "soupselect"    : "latest",
+    "express"       : "latest",
+    "request"       : "latest"
+  }
+}
