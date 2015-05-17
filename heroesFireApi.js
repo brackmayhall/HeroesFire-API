@@ -27,8 +27,8 @@ function ingestHeroHTML(url,res){
                 tempHero.franchise = buildHeroFranchise(select(dom,'.hero-stats'));
                 tempHero.price = buildHeroPrice(select(dom,'.hero-stats'));
                 tempHero.stats = buildHeroStats(select(dom,'.hero-stats table tr'));
-                tempHero.trait = buildHeroTrait(select(dom,'.tab-contents'));
-                console.log(tempHero.trait);
+                //tempHero.trait = buildHeroTrait(select(dom,'.tab-contents'));
+                console.log(tempHero);
 
             }
         });
@@ -67,12 +67,12 @@ function buildHeroPrice(html){
 }
 
 function buildHeroTrait(html){
-	var traitIcon = domainUrl + html[0].children[1].children[7].children[1].children[1].children[1].children[1].attribs['src']
+	//var traitIcon = domainUrl + html[0].children[1].children[7].children[1].children[1].children[1].children[1].attribs['src'];
 
 	// image 
-	var detailHTML = html[0].children[1].children[7].children[2];
-	var name = detailHTML.children[1].children[0].children[0].raw.trim();
-	console.log(name);
+	//var detailHTML = html[0].children[1].children[7].children[2];
+	//var name = detailHTML.children[1].children[0].children[0].raw.trim();
+	//console.log(name);
 }
 
 function buildHeroPrimaryAbilities(html){
@@ -156,6 +156,47 @@ function statBuilder(tr,type){
      
     return o;
 }
+
+app.get('', function(req, res){
+var heroes = ['abathur',
+			'anubarak',
+			'arthas',
+			'azmodan',
+			'brightwing',
+			'chen',
+			'diablo',
+			'elite-tauren-chieftain',
+			'falstad',
+			'gazlowe',
+			'illidan',
+			'jaina',
+			'kaelthas',
+			'kerrigan',
+			'li-li',
+			'malfurion',
+			'muradin',
+			'murky',
+			'nazeebo',
+			'nova',
+			'raynor',
+			'rehgar',
+			'sergeant-hammer',
+			'sonya',
+			'stitches',
+			'sylvanas',
+			'tassadar',
+			'the-lost-vikings',
+			'thrall',
+			'tychus',
+			'tyrael',
+			'tyrande',
+			'uther',
+			'valla',
+			'zagara',
+			'zeratul'];
+
+	res.send(heroes);
+})
 
 // hero endpoints
 app.get('/abathur', function(req, res){
@@ -305,56 +346,3 @@ app.get('/zeratul', function(req, res){
 app.listen('8081')
 console.log('Magic happens on port 8081');
 exports = module.exports = app; 
-
-/*
-abathur
-anubarak
-arthas
-azmodan
-brightwing
-chen
-diablo
-elite-tauren-chieftain
-falstad
-gazlowe
-illidan
-jaina
-kaelthas
-kerrigan
-li-li
-malfurion
-muradin
-murky
-nazeebo
-nova
-raynor
-rehgar
-sergeant-hammer
-sonya
-stitches
-sylvanas
-tassadar
-the-lost-vikings
-thrall
-tychus
-tyrael
-tyrande
-uther
-valla
-zagara
-zeratul
-*/
-
-
-/*
-			var heroHtml = select(html, '.hero-image');
-			console.log(heroHtml);
-			fs.writeFile("output.html", html, function(err) {
-				if(err) {
-					return console.log(err);
-				}
-
-				console.log("The file was saved!");
-			}); 
-			res.send(html);
-			*/
